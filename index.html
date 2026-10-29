@@ -77,7 +77,7 @@ h2 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase;
 .head p.lede { margin: 0; max-width: 42ch; color: var(--muted); }
 
 /* REELS */
-.reels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.reels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .reel { margin: 0; min-width: 0; }
 .frame { position: relative; display: block; width: 100%; aspect-ratio: 9 / 16; border: 0; padding: 0; background: var(--surface); border-radius: 6px; overflow: hidden; cursor: pointer; color: inherit; }
 .frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -168,7 +168,7 @@ footer a:hover { color: var(--fg); }
     <div class="eyebrow"><b>Video Editor</b><span>+ Web Developer</span></div>
     <div class="avail">Available for freelance <i aria-hidden="true">✦</i></div>
     <h1 class="big" aria-label="Portfolio">Portfolio</h1>
-    <div class="stage"><img class="me" src="img/me.webp" alt="Portrait of Abishek T in a light grey suit and sunglasses" width="821" height="1400"></div>
+    <div class="stage"><img class="me" src="me.webp" alt="Portrait of Abishek T in a light grey suit and sunglasses" width="821" height="1400"></div>
     <div class="tagline"><i aria-hidden="true">✦</i><span>Turning ideas into powerful visual experiences</span></div>
     <div class="info">
       <p class="hello">Hello, I'm</p>
@@ -183,12 +183,11 @@ footer a:hover { color: var(--fg); }
       <div><p class="label">Video work</p><h2>Selected edits</h2></div>
       <p class="lede">A cinematic film and vertical reels for Instagram and YouTube Shorts. Tap any video to play it with sound.</p>
     </div>
-    <figure class="reel feature"><button class="frame wide" type="button" aria-label="Play cinematic video"><video muted loop playsinline preload="metadata" poster="media/v5.jpg"><source src="media/v5.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Cinematic edit</b><span>Landscape film with colour grade and sound design</span></figcaption></figure>
+    <figure class="reel feature"><button class="frame wide" type="button" aria-label="Play cinematic video"><video muted loop playsinline preload="metadata" poster="v5.jpg"><source src="v5.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Cinematic edit</b><span>Landscape film with colour grade and sound design</span></figcaption></figure>
     <div class="reels">
-      <figure class="reel"><button class="frame" type="button" aria-label="Play reel: AI versus raw footage"><video muted loop playsinline preload="metadata" poster="media/v1.jpg"><source src="media/v1.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Raw vs AI edit</b><span>Split comparison reel</span></figcaption></figure>
-      <figure class="reel"><button class="frame" type="button" aria-label="Play reel: word-by-word subtitles"><video muted loop playsinline preload="metadata" poster="media/v2.jpg"><source src="media/v2.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Word-by-word captions</b><span>Talking-head reel with animated subtitles</span></figcaption></figure>
-      <figure class="reel"><button class="frame" type="button" aria-label="Play reel: attention is expensive"><video muted loop playsinline preload="metadata" poster="media/v3.jpg"><source src="media/v3.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Kinetic typography</b><span>Text-driven motion graphics reel</span></figcaption></figure>
-      <figure class="reel"><button class="frame" type="button" aria-label="Play reel: temple wedding highlight"><video muted loop playsinline preload="metadata" poster="media/v4.jpg"><source src="media/v4.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Wedding highlight</b><span>Ceremony edit with colour grade</span></figcaption></figure>
+      <figure class="reel"><button class="frame" type="button" aria-label="Play reel: word-by-word subtitles"><video muted loop playsinline preload="metadata" poster="v2.jpg"><source src="v2.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Word-by-word captions</b><span>Talking-head reel with animated subtitles</span></figcaption></figure>
+      <figure class="reel"><button class="frame" type="button" aria-label="Play reel: attention is expensive"><video muted loop playsinline preload="metadata" poster="v3.jpg"><source src="v3.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Kinetic typography</b><span>Text-driven motion graphics reel</span></figcaption></figure>
+      <figure class="reel"><button class="frame" type="button" aria-label="Play reel: temple wedding highlight"><video muted loop playsinline preload="metadata" poster="v4.jpg"><source src="v4.mp4" type="video/mp4"></video><span class="play"></span></button><figcaption><b>Wedding highlight</b><span>Ceremony edit with colour grade</span></figcaption></figure>
     </div>
   </section>
 
