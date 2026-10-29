@@ -55,6 +55,24 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   position: absolute; z-index: 2; left: 50%; top: 9%; height: 150%; width: auto; max-width: none;
   transform: translateX(-52%);
   filter: drop-shadow(0 0 1.5px #ff4a2a) drop-shadow(0 0 16px rgba(232,57,29,.4));
+  will-change: transform, filter;
+  animation: portraitEnter 900ms cubic-bezier(.2,.75,.25,1) both, portraitFloat 5s 900ms ease-in-out infinite;
+}
+@keyframes portraitEnter {
+  from { opacity: 0; transform: translateX(-52%) translateY(45px) scale(.96); filter: blur(8px) drop-shadow(0 0 16px rgba(232,57,29,.4)); }
+  to { opacity: 1; transform: translateX(-52%) translateY(0) scale(1); filter: drop-shadow(0 0 1.5px #ff4a2a) drop-shadow(0 0 16px rgba(232,57,29,.4)); }
+}
+@keyframes portraitFloat {
+  0%, 100% { transform: translateX(-52%) translateY(0) scale(1); }
+  50% { transform: translateX(-52%) translateY(-10px) scale(1.015); }
+}
+@keyframes portraitMobileEnter {
+  from { opacity: 0; transform: translateY(45px) scale(.96); filter: blur(8px) drop-shadow(0 0 16px rgba(232,57,29,.4)); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: drop-shadow(0 0 1.5px #ff4a2a) drop-shadow(0 0 16px rgba(232,57,29,.4)); }
+}
+@keyframes portraitMobileFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.015); }
 }
 .info { position: absolute; z-index: 3; left: 0; bottom: 4%; width: 30%; min-width: 250px; }
 .hello { font-family: var(--f-script); font-style: italic; font-weight: 600; font-size: 25px; line-height: 1; margin: 0 0 4px; }
@@ -146,7 +164,7 @@ footer a:hover { color: var(--fg); }
   .eyebrow b { font-size: 12px; }
   .big { position: relative; top: auto; font-size: 22.5vw; }
   .stage { position: relative; }
-  .me { position: relative; left: auto; top: auto; transform: none; height: auto; width: min(84%, 420px); display: block; margin: -17vw auto 0; -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent); }
+  .me { position: relative; left: auto; top: auto; transform: none; height: auto; width: min(84%, 420px); display: block; margin: -17vw auto 0; -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent); animation: portraitMobileEnter 900ms cubic-bezier(.2,.75,.25,1) both, portraitMobileFloat 5s 900ms ease-in-out infinite; }
   .info { position: relative; left: auto; bottom: auto; width: 100%; min-width: 0; margin-top: -8vw; }
   .info .bio { max-width: 52ch; }
   .stats { position: relative; right: auto; bottom: auto; width: 100%; min-width: 0; margin-top: 28px; }
@@ -160,7 +178,11 @@ footer a:hover { color: var(--fg); }
   .reel figcaption span { font-size: 12px; }
   .name { font-size: 44px; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .frame .play { transition: none; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .frame .play { transition: none; }
+  .me { animation: none; }
+}
 </style>
 
 <div class="wrap">
